@@ -7,6 +7,6 @@ for i in numbers:
     print(i)
 if Position_one <= len(numbers) >= Position_two:
      composition = numbers[Position_one - 1] * numbers[Position_two - 1]
-     print(composition)
+     print(f"Произведение позиций {composition}")
 else:
     print("Число вне диапазона списка!")

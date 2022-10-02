@@ -22,13 +22,9 @@ def form(numbers):
 
 def summa(array):
     result = 0
-    count = 0
-    for i in len(array):
-        if count <= len(array):
-            result = result + array[count]
-            count += 2
+    for i in range(0, len(array), 2):
+        result += array[i]
     print(result)
 
-numbers = int(input())
-form(numbers)
-summa(array)
+numbers = int(input("Введите число: "))
+summa(form(numbers))

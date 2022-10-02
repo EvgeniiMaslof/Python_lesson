@@ -6,14 +6,7 @@
 # [10, 2, 3, 8, 9]
 # 22
 
-# in
-# 4
-
-# out
-# [4, 2, 4, 9]
-# 8
 import random
-
 
 def form(numbers):
     array = random.sample(range(numbers * 2), numbers)

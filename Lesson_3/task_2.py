@@ -20,7 +20,6 @@ def form(numbers):
     return array
 def composition(array):
     array2 = []
-    i = 0
     for i in range(0, len(array)//2):
         array2.append(array[i] * array[-i-1])
     if len(array) % 2 != 0:

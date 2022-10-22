@@ -1,11 +1,12 @@
 # 1. Представлен список чисел. Необходимо вывести элементы исходного списка, значения
 # которых больше предыдущего элемента.
+from random import randint
 
 
-result_list = []
-list = [int(i) for i in input("Введите список чисел: ").split()]
-for i in range(1, len(list)):
-    if list[i] > list[i-1]:
-        (result_list.append(list[i]))
-print("Исходный список: ", list)
-print("Список, элементы которого больше предыдущего: ", result_list)
+def random_list(number):
+    result_list = [randint(0, 1000) for _ in range(number)]
+    print(result_list)
+    return [result_list[number] for number in range(1, len(result_list)) if result_list[number] > result_list[number - 1]]
+
+
+print(random_list(int(input('Введите число: '))))

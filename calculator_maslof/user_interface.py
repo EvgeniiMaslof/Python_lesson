@@ -40,9 +40,9 @@ def number_type_selection():
 
 def choosing_an_arithmetic_action(a, b):
     global c
-    num_2 = input('Введите операцию над числами!\n' '+  - * / \n'  'Ввод: ')
+    num_2 = input('Введите операцию над числами!\n' '+  - * / ^ q \n'  'Ввод: ')
     count = 0
-    operands = '+-*/'
+    operands = '+-*/^q'
     while count == 0:
         for i in operands:
             if num_2 == operands[0]:

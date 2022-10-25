@@ -6,17 +6,25 @@ import model_mult
 import model_div
 import logg
 import excep as ex
-
+def number():
+    num = input('Введите число: ')
+    operand = '123'
+    count = 0
+    while count >= 1:
+        if num == '' or num == ' ' or num not in operand or 0 >= int(num) >= 4:
+            print('Неверный ввод')
+            num = input('Введите число: ')
+            count = 0
+        else:
+            count += 1
+    return int(num)
 def number_type_selection():
     global a, b
     count = 0
     num = input('C каками числами будем работать:\n' '1.Рационалные;\n' '2.Комплексные.\n' '3.Завершение задачи.\n' 'Ввод: ')
-    ex.digit()
+    number()
     while count == 0:
-        if num != 1 and num != 2 and num != 3 or num == ' ':
-            num = int(input('Некорректный ввод! Введите 1 или 2 или 3.\n' 'Ввод: '))
-            count = 0
-        elif num == 1:
+        if num == 1:
             a = compl.get_value()
             b = compl.get_value()
             count = 1
